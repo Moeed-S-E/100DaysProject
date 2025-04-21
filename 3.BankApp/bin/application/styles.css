@@ -1,0 +1,43 @@
+.root-pane {
+    -fx-background-color: #000000;
+}
+
+.header-label {
+    -fx-text-fill: white;
+    -fx-font-family: "System Bold Italic";
+    -fx-font-size: 30;
+}
+
+.info-label {
+    -fx-text-fill: white;
+    -fx-font-family: "System Bold";
+    -fx-font-size: 22;
+}
+
+.primary-button {
+    -fx-background-color: #04ffb4;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-background-radius: 5;
+}
+
+.primary-button:hover {
+    -fx-background-color: #03e69e;
+}
+
+.secondary-button {
+    -fx-background-color: #555555;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+    -fx-background-radius: 5;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #666666;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-font-size: 18;
+    -fx-background-radius: 5;
+}

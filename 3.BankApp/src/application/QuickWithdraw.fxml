@@ -3,41 +3,51 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="682.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="682.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label layoutX="74.0" layoutY="28.0" text="Welcome to HBL ATM Clone by Moeed" textFill="WHITE">
+      <Label layoutX="74.0" layoutY="28.0" text="Welcome to HBL ATM Clone by Moeed" textFill="WHITE" styleClass="header-label">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="31.0" layoutY="123.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="10000">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="31.0" layoutY="199.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="15000">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="534.0" layoutY="123.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="20000">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="534.0" layoutY="199.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="25000">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="31.0" layoutY="273.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="5000">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="534.0" layoutY="273.0" mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="2500">
+      <GridPane layoutX="200.0" layoutY="100.0" hgap="20.0" vgap="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="5000" styleClass="primary-button" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="10000" styleClass="primary-button" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="15000" styleClass="primary-button" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="20000" styleClass="primary-button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="25000" styleClass="primary-button" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#subBalance" prefHeight="44.0" prefWidth="111.0" text="2500" styleClass="primary-button" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Button layoutX="291.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToMainMenu" prefHeight="44.0" prefWidth="100.0" text="Back" styleClass="secondary-button">
          <font>
             <Font size="20.0" />
          </font>

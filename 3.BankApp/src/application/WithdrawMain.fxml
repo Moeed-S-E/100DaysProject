@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="682.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="682.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Label layoutX="74.0" layoutY="28.0" text="Welcome to HBL ATM Clone by Moeed" textFill="WHITE">
+      <Label layoutX="74.0" layoutY="28.0" styleClass="header-label" text="Welcome to HBL ATM Clone by Moeed" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="262.0" layoutY="210.0" prefHeight="45.0" prefWidth="159.0" />
-      <Label alignment="CENTER" layoutX="149.0" layoutY="123.0" prefHeight="32.0" prefWidth="384.0" text="Number must be mutilple of 500" textAlignment="CENTER" textFill="#fcfcfc">
+      <Button layoutX="240.0" layoutY="150.0" mnemonicParsing="false" onAction="#switchToQuickWithdrawPage" prefHeight="44.0" prefWidth="204.0" styleClass="primary-button" text="Quick Withdraw">
          <font>
-            <Font name="System Bold" size="22.0" />
+            <Font size="20.0" />
          </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <effect>
-            <DropShadow />
-         </effect>
-      </Label>
-      <Button layoutX="298.0" layoutY="357.0" mnemonicParsing="false" onAction="#switchToTranscationsPage" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #04ffb4;" text="Next" textFill="WHITE">
+      </Button>
+      <Button layoutX="240.0" layoutY="210.0" mnemonicParsing="false" onAction="#switchToWithdrawPage" prefHeight="44.0" prefWidth="204.0" styleClass="primary-button" text="Custom Withdraw">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="240.0" layoutY="270.0" mnemonicParsing="false" onAction="#switchToTranscationsPage" prefHeight="44.0" prefWidth="204.0" styleClass="primary-button" text="Check Balance">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="289.0" layoutY="346.0" mnemonicParsing="false" onAction="#PinPage" prefHeight="44.0" prefWidth="107.0" styleClass="secondary-button" text="Logout">
          <font>
             <Font size="20.0" />
          </font>

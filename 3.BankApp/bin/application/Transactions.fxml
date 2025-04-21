@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="682.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Label layoutX="74.0" layoutY="28.0" text="Welcome to HBL ATM Clone by Moeed" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="148.0" layoutY="201.0" text="NOT IMPLEMENT IT" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="42.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

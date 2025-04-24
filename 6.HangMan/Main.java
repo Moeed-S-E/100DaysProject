@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class HangmanGame extends JFrame implements ActionListener {
-    private String[] words = {"hangman", "java", "swing", "programming", "openai"};
+    private String[] words = {"hangman", "java", "swing", "programming", "moeed"};
     private String wordToGuess;
     private int guessesLeft = 6;
     private StringBuilder hiddenWord;

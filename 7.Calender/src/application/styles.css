@@ -1,0 +1,8 @@
+.table-view {
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}

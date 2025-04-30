@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.5" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="main.controller.VisualizerController">
+    <items>
+        <VBox>
+            <TextArea fx:id="cppCodeArea" promptText="Enter C++ code here..." />
+            <Button onAction="#showDataTypes" prefHeight="25.0" prefWidth="150.0" text="Show Data Types" />
+            <Button onAction="#visualizeCppMemory" prefHeight="25.0" prefWidth="150.0" text="Visualize C++ Memory" />
+            <Button onAction="#visualizeArray" prefHeight="25.0" prefWidth="150.0" text="Visualize Array" />
+            <Button onAction="#visualizeString" prefHeight="25.0" prefWidth="150.0" text="Visualize String" />
+            <Button onAction="#simulatePointer" prefHeight="25.0" prefWidth="150.0" text="Simulate Pointer" />
+        </VBox>
+        <TextArea fx:id="outputArea" editable="false" />
+    </items>
+</SplitPane>

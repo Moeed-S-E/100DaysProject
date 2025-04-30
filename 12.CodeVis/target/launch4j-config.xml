@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\Lenovo\eclipse-workspace\CodeVis\target\CodeVisualizer-0.0.1-SNAPSHOT.jar</jar>
+  <outfile>D:\Lenovo\CodeVis-Dist\CodeVisualizer.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon></icon>
+  <classPath>
+    <mainClass>main.app.App</mainClass>
+    <cp>libs\javafx-controls-21.0.7.jar</cp>
+    <cp>libs\javafx-fxml-21.0.7.jar</cp>
+  </classPath>
+  <jre>
+    <path>C:\Users\Lenovo\eclipse-workspace\CodeVis\target\jre\bin</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>21</minVersion>
+    <maxVersion></maxVersion>
+    <opt>--module-path=libs --add-modules=javafx.controls,javafx.fxml</opt>
+  </jre>
+</launch4jConfig>

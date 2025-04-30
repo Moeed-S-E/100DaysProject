@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<SplitPane xmlns:fx="http://javafx.com/fxml" fx:controller="main.controller.VisualizerController">
+    <items>
+        <VBox>
+            <TextArea fx:id="cppCodeArea" promptText="Enter C++ code here..." />
+            <Button text="Visualize C++ Memory" onAction="#visualizeCppMemory" />
+            <Button text="Show Data Types" onAction="#showDataTypes" />
+            <Button text="Visualize Array" onAction="#visualizeArray" />
+            <Button text="Visualize String" onAction="#visualizeString" />
+            <Button text="Simulate Pointer" onAction="#simulatePointer" />
+        </VBox>
+        <TextArea fx:id="outputArea" editable="false" />
+    </items>
+</SplitPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #757272;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="70.0" layoutY="238.0" prefHeight="45.0" prefWidth="260.0" style="-fx-background-color: #757272; -fx-border-color: #333; -fx-border-radius: 15;" text="Listening" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Circle fx:id="animatedCircle" fill="DODGERBLUE" layoutX="200.0" layoutY="132.0" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+
+   </children>
+</AnchorPane>

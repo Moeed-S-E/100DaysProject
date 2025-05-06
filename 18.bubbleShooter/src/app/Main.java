@@ -121,7 +121,7 @@ public class Main extends Application {
 
 //        Images load and handle Exceptions 
         try {
-            bubbleImage = new Image(getClass().getResourceAsStream("bubble-sprites.png"));
+        	bubbleImage = new Image(getClass().getResourceAsStream("bubble-sprites.png"), 40 * BUBBLE_COLORS, 40, true, true);
             if (bubbleImage.isError()) {
                 System.err.println("Failed to load bubble-sprites.png: Image error detected.");
                 bubbleImage = null;
@@ -288,8 +288,72 @@ public class Main extends Application {
         gameState = GameState.READY;
     }
 
+//    private void stateRemoveCluster(double dt) {
+//        if (cluster.isEmpty() && floatingClusters.isEmpty()) {
+//            nextBubble();
+//            gameState = GameState.READY;
+//            return;
+//        }
+//
+//        boolean tilesLeft = false;
+//
+//        // Fade out cluster tiles
+//        for (Tile tile : cluster) {
+//            if (!tile.removed) continue;
+//            tilesLeft = true;
+//            tile.alpha -= dt * 15;
+//            if (tile.alpha <= 0) {
+//                tile.type = -1;
+//                tile.alpha = 1.0;
+//                tile.removed = false;
+//            }
+//        }
+//
+//        // Drop floating clusters
+//        for (List<Tile> floatingCluster : floatingClusters) {
+//            for (Tile tile : floatingCluster) {
+//                if (!tile.removed) continue;
+//                tilesLeft = true;
+//                tile.velocity += dt * 700;
+//                tile.shift += dt * tile.velocity;
+//                tile.alpha -= dt * 8;
+//
+//                if (tile.alpha <= 0 || tile.y * level.rowHeight + tile.shift > (level.rows - 1) * level.rowHeight + level.tileHeight) {
+//                    tile.type = -1;
+//                    tile.shift = 0;
+//                    tile.alpha = 1.0;
+//                    tile.removed = false;
+//                }
+//            }
+//        }
+//
+//        if (!tilesLeft) {
+//            score += cluster.size() * 100;
+//            for (List<Tile> floatingCluster : floatingClusters) {
+//                score += floatingCluster.size() * 100;
+//            }
+//            resetRemoved();
+//            cluster.clear();
+//            floatingClusters.clear();
+//            if (checkGameOver()) return;
+//            gameState = GameState.READY;
+//        }
+//    }
+
     private void stateRemoveCluster(double dt) {
         if (cluster.isEmpty() && floatingClusters.isEmpty()) {
+            // Add score before moving to next bubble
+            score += cluster.size() * 100;
+            for (List<Tile> floatingCluster : floatingClusters) {
+                score += floatingCluster.size() * 100;
+            }
+            resetRemoved();
+            cluster.clear();
+            floatingClusters.clear();
+            
+            // Check game over before proceeding
+            if (checkGameOver()) return;
+            
             nextBubble();
             gameState = GameState.READY;
             return;
@@ -336,10 +400,11 @@ public class Main extends Application {
             cluster.clear();
             floatingClusters.clear();
             if (checkGameOver()) return;
+            nextBubble();
             gameState = GameState.READY;
         }
     }
-
+    
     private boolean checkGameOver() {
         for (int i = 0; i < level.columns; i++) {
             if (level.tiles[i][level.rows - 1].type != -1) {
@@ -460,13 +525,28 @@ public class Main extends Application {
         return neighbors;
     }
 
+//    private void nextBubble() {
+//        player.tileType = player.nextBubble.tileType;
+//        player.bubble.tileType = player.nextBubble.tileType;
+//        player.bubble.x = player.x;
+//        player.bubble.y = player.y;
+//        player.bubble.visible = true;
+//        player.nextBubble.tileType = getExistingColor();
+//    }
     private void nextBubble() {
         player.tileType = player.nextBubble.tileType;
         player.bubble.tileType = player.nextBubble.tileType;
         player.bubble.x = player.x;
         player.bubble.y = player.y;
         player.bubble.visible = true;
-        player.nextBubble.tileType = getExistingColor();
+        
+        // Ensure we always get a valid bubble type
+        List<Integer> colors = findColors();
+        if (colors.isEmpty()) {
+            player.nextBubble.tileType = 0; // Default color if no colors exist (shouldn't happen)
+        } else {
+            player.nextBubble.tileType = colors.get(randRange(0, colors.size() - 1));
+        }
     }
 
     private void updateFps(double dt) {

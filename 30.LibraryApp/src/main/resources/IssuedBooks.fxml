@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controller.IssuedBooksController" spacing="10" alignment="CENTER">
+    <TableView fx:id="issuedBooksTable">
+        <columns>
+            <TableColumn fx:id="issueIDColumn" text="Issue ID" prefWidth="70">
+                <cellValueFactory><PropertyValueFactory property="issueID"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="bookIDColumn" text="Book ID" prefWidth="70">
+                <cellValueFactory><PropertyValueFactory property="bookID"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="memberIDColumn" text="Member ID" prefWidth="80">
+                <cellValueFactory><PropertyValueFactory property="memberID"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="issueDateColumn" text="Issue Date" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="issueDate"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="returnDateColumn" text="Return Date" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="returnDate"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Book ID:"/>
+        <TextField fx:id="bookIDField" prefWidth="70"/>
+        <Label text="Member ID:"/>
+        <TextField fx:id="memberIDField" prefWidth="70"/>
+        <Label text="Issue Date (YYYY-MM-DD):"/>
+        <TextField fx:id="issueDateField" prefWidth="100"/>
+        <Label text="Return Date (YYYY-MM-DD):"/>
+        <TextField fx:id="returnDateField" prefWidth="100"/>
+        <Button text="Issue Book" onAction="#issueBook"/>
+    </HBox>
+</VBox>

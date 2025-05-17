@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controller.MembersController" spacing="10" alignment="CENTER">
+    <TableView fx:id="membersTable">
+        <columns>
+            <TableColumn fx:id="memberIDColumn" text="ID" prefWidth="50">
+                <cellValueFactory><PropertyValueFactory property="memberID"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="emailColumn" text="Email" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Name:"/>
+        <TextField fx:id="nameField" prefWidth="200"/>
+        <Label text="Email:"/>
+        <TextField fx:id="emailField" prefWidth="200"/>
+        <Label text="Phone:"/>
+        <TextField fx:id="phoneField" prefWidth="150"/>
+        <Button text="Add Member" onAction="#addMember"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="app.controller.BooksController" spacing="10" alignment="CENTER">
+    <TableView fx:id="booksTable">
+        <columns>
+            <TableColumn fx:id="bookIDColumn" text="ID" prefWidth="50">
+                <cellValueFactory><PropertyValueFactory property="bookID"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="title"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="author"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="genreColumn" text="Genre" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="genre"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="quantity"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Title:"/>
+        <TextField fx:id="titleField" prefWidth="200"/>
+        <Label text="Author:"/>
+        <TextField fx:id="authorField" prefWidth="150"/>
+        <Label text="Genre:"/>
+        <TextField fx:id="genreField" prefWidth="100"/>
+        <Label text="Quantity:"/>
+        <TextField fx:id="quantityField" prefWidth="50"/>
+        <Button text="Add Book" onAction="#addBook"/>
+    </HBox>
+</VBox>

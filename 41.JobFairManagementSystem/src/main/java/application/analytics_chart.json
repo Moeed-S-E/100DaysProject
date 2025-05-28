@@ -1,0 +1,37 @@
+{
+    "type": "pie",
+    "data": {
+        "labels": ["Selected", "Pending"],
+        "datasets": [{
+            "data": [0, 0],
+            "backgroundColor": ["#1aa35f", "#b9ffab"],
+            "borderColor": ["#ffffff", "#ffffff"],
+            "borderWidth": 2
+        }]
+    },
+    "options": {
+        "responsive": true,
+        "plugins": {
+            "legend": {
+                "position": "top",
+                "labels": {
+                    "font": {
+                        "size": 14,
+                        "family": "Segoe UI"
+                    },
+                    "color": "#1b1f1d"
+                }
+            },
+            "title": {
+                "display": true,
+                "text": "Student Selection Status",
+                "font": {
+                    "size": 18,
+                    "family": "Segoe UI",
+                    "weight": "bold"
+                },
+                "color": "#1b1f1d"
+            }
+        }
+    }
+}

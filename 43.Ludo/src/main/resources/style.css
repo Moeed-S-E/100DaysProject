@@ -1,0 +1,43 @@
+.ludo-container {
+    -fx-background-color: #fff;
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: center;
+}
+
+.ludo {
+    -fx-border-color: #222;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+}
+
+.player-piece {
+    -fx-stroke: #fff;
+    -fx-stroke-width: 2;
+    -fx-effect: dropshadow(gaussian, #222, 2, 0.2, 0, 1);
+    -fx-cursor: hand;
+}
+
+.player-p1 { /* Blue */
+    -fx-fill: #2eafff;
+}
+.player-p2 { /* Green */
+    -fx-fill: #00b550;
+}
+.player-piece.highlight {
+    -fx-stroke: gold;
+    -fx-stroke-width: 4;
+}
+
+.btn-dice {
+    -fx-background-color: #009d60;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8px 20px;
+    -fx-background-radius: 8px;
+}
+
+.dice-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 10px;
+}

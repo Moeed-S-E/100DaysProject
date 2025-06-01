@@ -1,0 +1,14 @@
+.root {
+    -fx-background-image: url("pokemon-bg.jpg");
+    -fx-background-size: cover;
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-alignment: center;
+}
+.grid-pane {
+    -fx-background-color: whitesmoke;
+    -fx-border-color: lightgrey;
+    -fx-border-width: 10;
+}
+.image-view {
+    -fx-effect: dropshadow(gaussian, lightgrey, 5, 0, 0, 0);
+}

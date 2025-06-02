@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="dungeoncrawler.WinController"
+           style="-fx-background-color: #181028;">
+    <children>
+        <VBox alignment="CENTER" spacing="20">
+            <Label fx:id="winLabel" text="You Win!" style="-fx-text-fill: #a259c4; -fx-font-size: 32px;"/>
+            <Label fx:id="scoreLabel" text="Score: 0" style="-fx-text-fill: #fff; -fx-font-size: 22px;"/>
+            <Button text="Play Again" onAction="#playAgain" style="-fx-background-color: #a259c4; -fx-text-fill: #fff; -fx-font-size: 18px;"/>
+        </VBox>
+    </children>
+</StackPane>

@@ -1,0 +1,26 @@
+.root {
+    -fx-background-color: #181028;
+}
+.grid-cell {
+    -fx-background-color: #221a36;
+    -fx-border-color: #633364;
+    -fx-border-width: 1;
+}
+.player {
+    -fx-background-color: #a259c4;
+    -fx-background-radius: 50%;
+}
+.enemy {
+    -fx-background-color: #ff4d4d;
+    -fx-background-radius: 50%;
+}
+.treasure {
+    -fx-background-color: gold;
+    -fx-background-radius: 50%;
+}
+.status-bar {
+    -fx-background-color: #221a36;
+    -fx-padding: 10 0 10 0;
+    -fx-font-size: 16px;
+    -fx-text-fill: #fff;
+}

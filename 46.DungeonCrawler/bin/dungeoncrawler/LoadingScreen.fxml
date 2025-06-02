@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="dungeoncrawler.LoadingController"
+           style="-fx-background-color: #181028;">
+    <children>
+        <Circle fx:id="loaderCircle" radius="40" fill="#a259c4" opacity="0.7"/>
+        <Label text="Dungeon Crawler" style="-fx-text-fill: white; -fx-font-size: 32px;" />
+        <Label text="by Moeed" style="-fx-text-fill: #fff; -fx-font-size: 16px; -fx-translate-y: 60;" />
+    </children>
+</StackPane>

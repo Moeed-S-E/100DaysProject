@@ -1,0 +1,68 @@
+.root {
+    -fx-background-color: #121212;
+}
+
+#controls-bar {
+    -fx-background-color: rgba(30,30,30,0.7);
+    -fx-background-radius: 20;
+    -fx-padding: 16 24 16 24;
+    -fx-effect: dropshadow(gaussian, #00000088, 16, 0.2, 0, 4);
+    /* Glassmorphism: backdrop blur is simulated with shadow and transparency */
+}
+
+#playlist-panel {
+    -fx-background-color: rgba(30,30,30,0.7);
+    -fx-background-radius: 16;
+    -fx-padding: 10;
+}
+
+.list-view {
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 16;
+    -fx-text-fill: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-opacity: 0.85;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+.button:hover {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: #121212;
+    -fx-opacity: 1.0;
+}
+
+.label, .slider .track, .slider .thumb {
+    -fx-text-fill: #FFFFFF;
+}
+
+#current-time, #total-time {
+    -fx-text-fill: #B3B3B3;
+    -fx-font-size: 13px;
+}
+
+.slider {
+    -fx-control-inner-background: #2979FF33;
+    -fx-background-color: #2979FF33;
+}
+
+#volume-icon {
+    -fx-text-fill: #FFFFFF;
+    -fx-opacity: 0.7;
+    -fx-font-size: 16px;
+}
+.list-view .scroll-bar:vertical,
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-width: 0;
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}

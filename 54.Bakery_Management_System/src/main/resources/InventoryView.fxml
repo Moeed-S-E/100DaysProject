@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.controller.InventoryController" styleClass="main-bg">
+    <top>
+        <Label text="Bakery Inventory Management" styleClass="header"/>
+    </top>
+    <center>
+        <TableView fx:id="productTable" prefHeight="400.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="nameCol" text="Product Name" prefWidth="200"/>
+                <TableColumn fx:id="stockCol" text="Stock" prefWidth="100"/>
+                <TableColumn fx:id="priceCol" text="Price" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 10;">
+            <Button fx:id="addButton" text="Add Product" styleClass="add-btn"/>
+        </HBox>
+    </bottom>
+</BorderPane>
